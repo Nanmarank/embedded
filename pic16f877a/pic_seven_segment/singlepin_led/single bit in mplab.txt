@@ -1,0 +1,19 @@
+#include <xc.h>
+__CONFIG(0X3F3A);
+#define _XTAL_FREQ 10000000
+
+#define led RB0
+#define tled TRISB0 
+
+void main()
+{
+   tled=0;
+   while(1)
+   {
+      led=1;
+      __delay_ms(1000);
+      led=0;
+      __delay_ms(1000);
+   }
+
+}
